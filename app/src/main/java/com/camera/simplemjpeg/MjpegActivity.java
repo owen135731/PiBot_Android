@@ -58,8 +58,8 @@ public class MjpegActivity extends Activity {
 
     final Handler handler = new Handler();
 
-    final Pubnub pubnub = new Pubnub("pub-c-b72e8d8e-4e01-4896-ae5a-ad671c84ebc2", "sub-c-74baf600-439b-11e5-a9f1-02ee2ddab7fe");
-    String uuid = "android";
+    final Pubnub pubnub = new Pubnub("PUBLISHKEY", "SUBSCRIBEKEY");
+    String uuid = "YOURUUID";
 
     final Callback callback = new Callback() {
         public void successCallback(String channel, Object response) {
@@ -114,116 +114,7 @@ public class MjpegActivity extends Activity {
             System.out.println(e.toString());
         }
 
-       /*final Callback callback = new Callback() {
-            public void successCallback(String channel, Object response) {
-                System.out.println(response.toString());
-            }
-            public void errorCallback(String channel, PubnubError error) {
-                System.out.println(error.toString());
-            }
-        };*/
-
-
         setContentView(R.layout.main);
-
-       /* Button fwrdbutton = (Button) findViewById(R.id.forward);
-        fwrdbutton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                System.out.println("YOUGOTHERE");
-                String message;
-               // Toast.makeText(activity, "Forward", Toast.LENGTH_SHORT).show();
-                if (!forwardvalue) {
-                    message = "forward";
-
-                } else {
-                    message = "stop";
-
-                }
-                forwardvalue = !forwardvalue;
-                pubnub.publish("gpio-raspberry-control", message , callback);
-            }
-        });
-
-        Button bwrdbutton = (Button) findViewById(R.id.backward);
-        bwrdbutton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String message;
-                //Toast.makeText(activity,"Backward",Toast.LENGTH_SHORT).show();
-                if (!backwardvalue) {
-                    message = "backward";
-                } else {
-                    message = "stop";
-                }
-                backwardvalue = !backwardvalue;
-                pubnub.publish("gpio-raspberry-control", message , callback);
-            }
-        });
-
-        Button leftbutton = (Button) findViewById(R.id.left);
-        leftbutton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String message;
-                //Toast.makeText(activity, "Left", Toast.LENGTH_SHORT).show();
-                if (!leftvalue) {
-                    message = "left";
-                } else {
-                    message = "stop";
-                }
-                leftvalue = !leftvalue;
-                pubnub.publish("gpio-raspberry-control", message , callback);
-            }
-        });
-
-        Button rghtbutton = (Button) findViewById(R.id.right);
-        rghtbutton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String message;
-                //Toast.makeText(activity,"Right",Toast.LENGTH_SHORT).show();
-                if (!rightvalue) {
-                    message = "right";
-                } else {
-                    message = "stop";
-                }
-                rightvalue = !rightvalue;
-                pubnub.publish("gpio-raspberry-control", message , callback);
-            }
-        });
-
-        Button stopbutton = (Button) findViewById(R.id.stop);
-        stopbutton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String message;
-                //Toast.makeText(activity, "Stopped", Toast.LENGTH_SHORT).show();
-                message = "stop";
-                forwardvalue = false;
-                backwardvalue = false;
-                leftvalue = false;
-                rightvalue = false;
-                pubnub.publish("gpio-raspberry-control", message , callback);
-            }
-        });
-
-        Button killbutton = (Button) findViewById(R.id.kill);
-        killbutton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String message;
-                //Toast.makeText(activity,"Killed",Toast.LENGTH_SHORT).show();
-                message = "kill";
-                pubnub.publish("gpio-raspberry-control", message , callback);
-            }
-        });*/
 
         SharedPreferences preferences = getSharedPreferences("SAVED_VALUES", MODE_PRIVATE);
         width = preferences.getInt("width", width);
