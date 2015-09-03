@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Owner\.gradle\caches\modules-2\files-2.1\com.pubnub\pubnub-android\3.7.5\d2fca42bd2a37f584bcabeaecdc82fa4c458dd4e\pubnub-android-3.7.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d2fca42bd2a37f584bcabeaecdc82fa4c458dd4e">
+        <dex dex="C:\Users\Owner\AndroidStudioProjects\simplemjpegview\app\build\intermediates\pre-dexed\debug\pubnub-android-3.7.5-597615cfa372cf3f60fe23a3df5039a701dd076c.jar" />
+    </item>
+
+</items>
