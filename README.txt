@@ -13,14 +13,12 @@ The kit includes (almost) everything,
 
 Including:
 
-
     Chassis And Motorized Wheels
     Raspberry Pi B+ (and Raspbian OS SD card)
     Motor Control Board
 
 
 Not Included but used:
-
 
     Wifi Dongle
     Webcam
